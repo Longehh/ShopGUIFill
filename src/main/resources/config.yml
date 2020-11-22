@@ -1,0 +1,14 @@
+fillAllSlot: 46
+itemSlot: 13
+item:
+  material: "STORAGE_MINECART"
+  name: "&b&lFILL INVENTORY"
+  lore:
+    - "&7Click here to buy as many of"
+    - "&7this item you can fit in"
+    - "&7your inventory."
+messages:
+  guiTitle: "&8Buying "
+  boughtMessage: "&bShop &8> &fYou bought &c%itemAmount%x %itemName% &ffor &c$%price%"
+  cannotAffordMessage: "&c&l(!) &cYou cannot afford to fill your inventory with %itemAmount%x %itemName% (Costs: $%price%)"
+  inventoryFullMessage: "&c&l(!) &cYou cannot fill your inventory as your inventory is currently full."
