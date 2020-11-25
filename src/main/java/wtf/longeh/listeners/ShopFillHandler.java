@@ -46,7 +46,11 @@ public class ShopFillHandler implements Listener {
             if (e.getCurrentItem().getType() == Material.getMaterial(shopFillPlugin.getConfig().getString("item.material"))) {
                 Player player = (Player) e.getWhoClicked();
                 ItemStack shopItem = e.getInventory().getItem(shopFillPlugin.getConfig().getInt("itemSlot"));
-                double itemPrice = getPrice(shopItem);
+                double itemPrice = shopFillPlugin.getShopPriceCache().getPrice(shopItem);
+                if(itemPrice == 0.0) {
+                    player.sendMessage(C(shopFillPlugin.getConfig().getString("messages.cannotBuy")));
+                    return;
+                }
                 int freeSlots = calculateSlots(e.getWhoClicked().getInventory());
                 if (freeSlots != 0) {
                     int itemAmount = freeSlots * shopItem.getMaxStackSize();
@@ -99,17 +103,6 @@ public class ShopFillHandler implements Listener {
             colourizedList.add(C(s));
         }
         return colourizedList;
-    }
-
-    private double getPrice(ItemStack stack) {
-        String loreLine = stack.getItemMeta().getLore().get(0);
-        String[] split = loreLine.split("\\s+");
-        String price = split[2];
-
-        String actualPrice = price.substring(1);
-        String removedCommas = actualPrice.replace(",", "");
-
-        return Double.parseDouble(removedCommas);
     }
 
     public String C(String s) {

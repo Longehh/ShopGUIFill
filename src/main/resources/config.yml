@@ -12,3 +12,4 @@ messages:
   boughtMessage: "&bShop &8> &fYou bought &c%itemAmount%x %itemName% &ffor &c$%price%"
   cannotAffordMessage: "&c&l(!) &cYou cannot afford to fill your inventory with %itemAmount%x %itemName% (Costs: $%price%)"
   inventoryFullMessage: "&c&l(!) &cYou cannot fill your inventory as your inventory is currently full."
+  cannotBuy: "&c&l(!) &cYou cannot buy that item."
