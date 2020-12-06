@@ -18,3 +18,5 @@ messages:
  
  To the start of your specific configuration in ShopGUIPlus i.e. if it's "&2Buying " update the value to that.
  After all these steps have been followed you should be good to go, and the Fill Inventory item will be shown within the ShopGUIPlus GUI.
+ 
+ Test
