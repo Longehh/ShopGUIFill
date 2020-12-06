@@ -27,9 +27,9 @@
     </repositories>
     <dependencies>
         <dependency>
-            <groupId>com.github.TacoSpigot</groupId>
+            <groupId>net.techcable</groupId>
             <artifactId>TacoSpigot</artifactId>
-            <version>v1.8</version>
+            <version>v1.8.8</version>
         </dependency>
         <dependency>
             <groupId>net.milkbowl</groupId>
