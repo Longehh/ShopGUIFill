@@ -19,6 +19,12 @@
             </plugin>
         </plugins>
     </build>
+    <repositories>
+        <repository>
+            <id>longeh-dev</id>
+            <url>http://${env.LONGEH_DEV}:8081/repository/maven-public/</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>net.techcable</groupId>
